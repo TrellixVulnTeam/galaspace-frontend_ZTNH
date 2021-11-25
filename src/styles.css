@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* Material Icons Added */
+@import 'material-icons/iconfont/material-icons.css';
+
+/* Color variables */
+:root{
+    --purpleG: #3e2669;
+    --blueG: #5c4e9a;
+    --pinkG: #ED1f7F;
+   
+}
+
+/* Background body */
+body{
+    background-color: rgb(245, 245, 245);
+}
