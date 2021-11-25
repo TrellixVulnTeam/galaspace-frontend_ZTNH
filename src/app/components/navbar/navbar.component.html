@@ -1,0 +1,22 @@
+<nav>
+  <div class="d-flex justify-content-around align-items-center p-3" id="navbar-container">
+    <span
+      *ngFor="let option of options; let i = index"
+      [ngClass]="
+        outlined && index == i ? 'material-icons' : 'material-icons-outlined'
+      "
+      [ngStyle]="i == 2 ? {'font-size':'60px'} : {'font-size':''}"
+      (mouseenter)="changeClass(i)"
+      (mouseleave)="changeClass(i)"
+    >
+      {{ option }}
+    </span>
+    <span
+      class="material-icons"
+      (mouseenter)="changeFavorite()"
+      (mouseleave)="changeFavorite()"
+    >
+      {{ favorite }}
+    </span>
+  </div>
+</nav>
