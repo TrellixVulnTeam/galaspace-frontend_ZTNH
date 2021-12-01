@@ -13,3 +13,14 @@
 body{
     background-color: rgb(245, 245, 245);
 }
+
+/*Fonts added*/
+@font-face {
+    font-family: 'Arial';
+    src: url("/assets/fonts/arial.ttf");
+}
+
+@font-face {
+    font-family: 'Arial Rounded MT';
+    src: url("/assets/fonts/arial-rounded-mt.ttf");
+}

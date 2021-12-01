@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { CreatePublicationComponent } from './components/create-publication/create-publication.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
+import { SearchComponent } from './components/search/search.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { CreatePublicationComponent } from './components/create-publication/crea
     HomeComponent,
     NavbarComponent,
     ProfileComponent,
-    CreatePublicationComponent
+    CreatePostComponent,
+    SearchComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
