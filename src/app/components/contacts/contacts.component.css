@@ -1,0 +1,30 @@
+#container-contacts{
+    background-color: white;
+    border-radius: 15px;
+    height: 70vh;    
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.125);
+    overflow-y: scroll;
+}
+
+#item-contact{
+    padding: 15px;
+}
+
+#item-contact:hover{
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
+#profile-picture-contact{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+#contact-name{
+    margin-top: 10px;
+    font-family: 'Arial';
+    color: gray;
+    font-size: 16.5px;
+}
