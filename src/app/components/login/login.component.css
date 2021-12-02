@@ -1,0 +1,76 @@
+.wrapper-morado{
+  padding: 0;
+  background: radial-gradient(91.75% 91.75% at 90.02% 11.33%, #3E2669 0%, #2A1948 100%);
+  width: 60%;
+
+  min-height: 100vh;
+}
+.contenedor{
+  min-height: 100vh;
+}
+#Capa_2{
+  width: 187px;
+  height: 56px;
+  margin-top: 28px;
+  margin-left: 30px;
+
+}
+
+.container{
+  margin: 0;
+}
+.frases{
+  margin-top: 100px;
+}
+#frase1{
+  font-family: Arial Rounded MT Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 58px;
+  text-align: center;
+  color: #FFFFFF;
+
+  opacity: 0.74;
+}
+#frase2{
+font-family: Arial Rounded MT Bold;
+font-style: normal;
+font-weight: normal;
+font-size: 2.5rem;
+line-height: 58px;
+text-align: center;
+color: #FFFFFF;
+}
+#planeta1{
+  margin-top: 5px;
+  margin-left: 50px;
+}
+.imagenes{
+  margin-top: 50px;
+}
+#planeta2{
+  margin-top: 80px;
+  margin-left: 50px;
+
+}
+#sujeto{
+
+  width: 323px;
+  height: 271px;
+}
+#ola1{
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+#ola2{
+  position: relative;
+  width: 100%;
+  bottom: 0px;
+  top: -115px;
+  left: 0px;
+  right: 0px;
+}
+
