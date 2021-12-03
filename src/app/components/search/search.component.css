@@ -2,14 +2,14 @@
     background-color: white;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.125);
     border-radius: 15px;
-    height: 70vh;
+    min-height: 70vh;
 }
 #input-search{
     width: 80%;
     border: none;
     border-radius: 100px;
     background-color: rgb(218, 218, 218);
-    padding: 10px;
+    padding: 10px 10px 10px 25px;
     color: rgb(59, 59, 59);
     font-family: 'Arial';
     margin-right: 10px;
@@ -31,7 +31,7 @@
     color: white;
 }
 #container-results{
-    height: 100%;
+    height: 350px;
 }
 #icon-add-group{
     font-size: 45px;

@@ -1,14 +1,15 @@
 <app-navbar></app-navbar>
-<div class="row col-12" id="container-home">
-  <div class="col-lg-3 d-none d-lg-block">
+<div class="row " id="container-home">
+  <div class="col-lg-3 d-none d-lg-block fixed">
     <p id="subtitle">Buscar</p>
     <app-search></app-search>
   </div>
-  <div class="col-lg-6">
+  <div class="col-lg-6 offset-lg-3">
     <p id="title-create-publication">Crear publicación</p>
     <app-create-post></app-create-post>
+    <app-post></app-post>
   </div>
-  <div class="col-lg-3 d-none d-lg-block">
+  <div class="col-lg-3 d-none d-lg-block fixed offset-lg-9">
     <p id="subtitle">Contactos</p>
     <app-contacts></app-contacts>
   </div>

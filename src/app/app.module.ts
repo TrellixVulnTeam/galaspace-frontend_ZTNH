@@ -9,6 +9,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { SearchComponent } from './components/search/search.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     ProfileComponent,
     CreatePostComponent,
     SearchComponent,
-    ContactsComponent
+    ContactsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

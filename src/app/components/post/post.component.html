@@ -1,0 +1,58 @@
+<div id="container-post" *ngFor="let _ of [0,1,2,3,4,5,6,7]">
+    <div class="p-4 d-flex align-items-center justify-content-between">
+        <div class="d-flex">
+            <img 
+            [src]="post.picture_profile"
+            alt="profile-picture-friend"
+            id="profile-picture-friend"
+            class="img-fluid"
+            >
+            <p id="name">Name of friend</p>     
+        </div>
+        <div class="dropdown">
+            <button type="button" id="dropdown-menu" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-icons">
+                    more_vert
+                </span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdown-menu">
+                <li class="dropdown-item d-flex align-content-center"> 
+                    <span class="material-icons mr-icon">
+                    edit
+                    </span>
+                    Editar
+                </li>
+                <li class="dropdown-item d-flex align-content-center"> 
+                    <span class="material-icons mr-icon">
+                    delete_forever
+                    </span>
+                    Eliminar
+                </li>
+            </ul>
+        </div>
+    </div>
+    <img 
+    [src]="post.picture_post" 
+    alt="picture-post" 
+    id="picture-post"
+    >
+    <p class="m-4" id="text-post">
+        {{post.content}}
+    </p>
+    <div class="m-4 d-flex justify-content-between" id="container-down-butttons">
+        <button class="flat-button">
+            Comentar
+        </button>
+        <div class="d-flex">
+            <button class="flat-button">
+                {{"Comentarios  "+post.comments_quantity}}
+            </button>
+            <button id="favorite-button">
+                <span class="material-icons">
+                    favorite_border
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
