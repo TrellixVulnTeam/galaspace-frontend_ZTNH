@@ -1,0 +1,10 @@
+.contenedor{
+  min-height: 100vh;
+}
+.form-container{
+  background: crimson;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

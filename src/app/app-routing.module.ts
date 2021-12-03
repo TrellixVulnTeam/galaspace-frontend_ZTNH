@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { LoginGenComponent } from './components/login-gen/login-gen.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent, pathMatch: 'full'},
+  {path: 'login', component: LoginGenComponent, pathMatch: 'full'},
   //{path: '**', redirectTo: 'home'},
 ];
 

@@ -11,9 +11,10 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
 import { SearchComponent } from './components/search/search.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 
-import { CreatePublicationComponent } from './components/create-publication/create-publication.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginGenComponent } from './components/login-gen/login-gen.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 
 @NgModule({
@@ -25,11 +26,11 @@ import { LoginGenComponent } from './components/login-gen/login-gen.component';
 
     CreatePostComponent,
     SearchComponent,
-    ContactsComponent
-
-    CreatePublicationComponent,
+    ContactsComponent,
     LoginComponent,
-    LoginGenComponent
+    LoginGenComponent,
+    LoginFormComponent,
+    RegisterFormComponent
 
   ],
   imports: [
