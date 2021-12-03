@@ -7,6 +7,9 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CreatePublicationComponent } from './components/create-publication/create-publication.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { RequestComponent } from './components/request/request.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { CreatePublicationComponent } from './components/create-publication/crea
     HomeComponent,
     NavbarComponent,
     ProfileComponent,
-    CreatePublicationComponent
+    CreatePublicationComponent,
+    ChatComponent,
+    FriendsComponent,
+    RequestComponent
   ],
   imports: [
     BrowserModule,
