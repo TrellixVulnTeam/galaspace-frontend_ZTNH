@@ -11,7 +11,9 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
 import { SearchComponent } from './components/search/search.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 
-import { CreatePublicationComponent } from './components/create-publication/create-publication.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { RequestComponent } from './components/request/request.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginGenComponent } from './components/login-gen/login-gen.component';
 
@@ -22,12 +24,13 @@ import { LoginGenComponent } from './components/login-gen/login-gen.component';
     HomeComponent,
     NavbarComponent,
     ProfileComponent,
+    ChatComponent,
+    FriendsComponent,
+    RequestComponent,
 
     CreatePostComponent,
     SearchComponent,
-    ContactsComponent
-
-    CreatePublicationComponent,
+    ContactsComponent,
     LoginComponent,
     LoginGenComponent
 
