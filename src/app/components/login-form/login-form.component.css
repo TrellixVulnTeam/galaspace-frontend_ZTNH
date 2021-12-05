@@ -1,0 +1,70 @@
+.titulo{
+  font-family: Arial Rounded MT Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 58px;
+  text-align: left;
+  color: #452F75;
+  margin-bottom: 30px;
+}
+
+.formulario{
+  text-align: center;
+  width: 500px;
+  height: 300px;
+}
+#Ocontra{
+  color: #3E2669;
+}
+
+#email, #password{
+  border-color: #5C4E9A;
+  border-radius: 30px;
+  height: 50px;
+  border-width: 2px;
+}
+#email::placeholder,#password::placeholder{
+  color: #5C4E9A;
+  opacity: 0.5;
+}
+#btn_iniciar{
+  border-color: #3E2669;
+  border-width: 2px;
+  background-color: transparent;
+  color: #3E2669;
+  border-radius: 30px;
+  height: 50px;
+  font-family: Arial Rounded MT Bold;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+#btn_iniciar:hover{
+  background-color: #3E2669;
+  color: white;
+}
+.bottom{
+  position: absolute;
+  bottom: 30px;
+}
+#NTC{
+  font-size: 15px;
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  display: inline;
+  margin-right: 5px;
+}
+#link-registrar{
+  font-size: 15px;
+  font-family: Arial Rounded MT Bold;
+  font-style: normal;
+  font-weight: normal;
+  color: #3E2669;
+}
+#logo{
+  width: 160px;
+  height: 20px;
+}
+
