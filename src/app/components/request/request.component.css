@@ -1,0 +1,77 @@
+*{
+    font-family: Arial;
+    padding-top: 1%;
+}
+.d-second{
+    margin-bottom: 2%;
+}
+.p-request{
+    font-size:1.5rem;
+    color: #3E2669;
+    
+}
+.b-request{
+    font-size:1.5rem;
+    color: #E71F76;
+    border-radius: 50px;
+    width: 170px;
+    height: fit-content;
+    border: 4px #E71F76 solid;
+    transition: .4s;
+}
+.b-request:hover{
+    color: #fff;
+    background-color: #E71F76;
+    transition: .4s;
+    cursor:pointer;
+}
+.b-request:active{
+    transform: translateY(4px);
+}
+.img-user{
+    width: 60%;
+    border-radius: 100px;
+    background-color: rgba(207, 6, 140, 0.74);
+    transition: .5s;
+}
+.p-userName{
+    color: #3E2669;
+    font-size: 2.0rem;
+    transition: .5s;
+}
+.d-userName{
+    padding-top: 2%;
+}
+.d-icon{
+    padding-top: 3%;
+    
+}
+.p-userName{
+    width: fit-content;
+}
+.p-userName:hover{
+    cursor: pointer;
+    transform:translateY(3px);
+    transition: .5s;
+}
+.p-userName:active{
+    transform: translateY(5px);
+}
+.img-user:hover{
+    cursor: pointer;
+    transform:translateY(3px);
+    transition: .5s;
+}
+.img-user:active{
+    transform: translateY(5px);
+}
+.d-requesList{
+    margin-top: 6%;
+}
+#btn-accept{
+    margin-right: 5%;
+}
+.d-buttons{
+    padding-bottom: 2% !important;
+    border-bottom: 2px #5A5858 solid;
+}

@@ -2,9 +2,15 @@
   min-height: 100vh;
 }
 .form-container{
-  background: crimson;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -90px;
 }
+@media (max-width: 768px) {
+  .diseño{
+    display: none;
+  }
+}
+
