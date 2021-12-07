@@ -1,6 +1,9 @@
 <div class="row col-12 contenedor">
-  <app-login class="col-7 diseño"></app-login>
-  <div class="col form-container">
-    <app-login-form></app-login-form>
+  <app-login class="col-xl-7 col-sm-2 diseño"></app-login>
+  <div class="col form-container" *ngIf="status">
+    <app-register-form ></app-register-form>
+  </div>
+  <div class="col form-container2" *ngIf="!status">
+    <app-login-form ></app-login-form>
   </div>
 </div>

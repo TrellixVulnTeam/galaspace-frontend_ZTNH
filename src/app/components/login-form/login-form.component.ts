@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,15 +9,29 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent {
-
-  email = new FormControl('', [Validators.required, Validators.email]);
-
-  getErrorMessage() {
-    if (this.email.hasError('required')) {
-      return 'You must enter a value';
-    }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+  loginForm!: FormGroup;
+  constructor(private fb: FormBuilder, private router: Router) {
   }
+
+  ngOnInit() {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+    });
+  }
+  get f(){
+    return this.loginForm.controls;
+  }
+
+  onSubmit(form: FormGroup) {
+    if (form.invalid) {
+      console.log('form is invalid');
+    }
+    else{
+      this.router.navigate(['/home']);
+    }
+  }
+
+
 
 }
