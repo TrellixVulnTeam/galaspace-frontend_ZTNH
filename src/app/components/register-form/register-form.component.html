@@ -1,1 +1,82 @@
-<p>register-form works!</p>
+<div class="formulario">
+  <h2 class="titulo">Registro</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+
+    <div class="mb-4">
+      <input
+        placeholder="Nombre"
+        type="text"
+
+        id="nombre"
+        formControlName="name"
+        required
+      />
+      <p *ngIf="registerForm.get('name')!.invalid && (registerForm.get('name')!.dirty || registerForm.get('name')!.touched)" class="invalid">
+        * Campo requerido.
+      </p>
+    </div>
+    <div class="mb-4">
+      <input
+        placeholder="Email"
+        type="email"
+
+        id="email"
+        formControlName="email"
+        required
+      />
+      <p *ngIf="registerForm.get('email')!.invalid && (registerForm.get('email')!.dirty || registerForm.get('email')!.touched)" class="invalid">
+        * Correo Invalido.
+      </p>
+
+    </div>
+
+    <div class="mb-4">
+      <input
+        type="password"
+
+        id="password"
+        placeholder="Contraseña"
+        formControlName="password"
+        required
+      />
+      <div *ngIf="f.password.touched && f.password.invalid" class="invalid">
+        <p *ngIf="f.password.errors!.required">* La contraseña es requerida.</p>
+    </div>
+    </div>
+
+
+    <div class="mb-4">
+      <input
+        type="password"
+
+        id="password2"
+        placeholder="Confirma Contraseña"
+        formControlName="confirmPassword"
+        required
+      />
+      <p *ngIf="registerForm.hasError('notSame')" class="invalid">
+        * Las contraseñas no coinciden.
+      </p>
+      <br />
+      <p id="terminos">
+        Al registrarte aceptas nuestros
+        <a href="" id="link-terminos"
+          >términos y <br />
+          condiciones de privacidad.</a
+        >
+      </p>
+    </div>
+
+    <div class="d-grid gap-2">
+      <button  type="submit" id="btn_iniciar">
+        Registrarse
+      </button>
+    </div>
+  </form>
+  <div class="mt-3">
+    <p class="link-login">
+      ¿Ya tienes una cuenta?
+      <a routerLink="/login" id="link-login">Inicia Sesion</a>
+    </p>
+  </div>
+</div>

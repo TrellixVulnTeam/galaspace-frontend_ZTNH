@@ -8,6 +8,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginGenComponent, pathMatch: 'full'},
+  {path: 'register', component: LoginGenComponent, pathMatch: 'full'},
   //{path: '**', redirectTo: 'home'},
 ];
 
