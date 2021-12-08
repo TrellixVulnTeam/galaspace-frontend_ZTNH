@@ -1,9 +1,8 @@
 .wrapper-morado{
+  position: relative;
   padding: 0;
   background: radial-gradient(91.75% 91.75% at 90.02% 11.33%, #3E2669 0%, #2A1948 100%);
-  width: 60%;
-
-  min-height: 100vh;
+  height: 100%;
 }
 .contenedor{
   min-height: 100vh;
@@ -15,12 +14,11 @@
   margin-left: 30px;
 
 }
-
 .container{
   margin: 0;
 }
 .frases{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 #frase1{
   font-family: Arial Rounded MT Bold;
@@ -50,8 +48,8 @@ color: #FFFFFF;
   margin-top: 50px;
 }
 #planeta2{
-  margin-top: 80px;
-  margin-left: 50px;
+  margin-top: 70px;
+  margin-left: 40px;
 
 }
 #sujeto{
@@ -60,17 +58,7 @@ color: #FFFFFF;
   height: 271px;
 }
 #ola1{
+  position: absolute;
   width: 100%;
   bottom: 0px;
-  left: 0px;
-  right: 0px;
 }
-#ola2{
-  position: relative;
-  width: 100%;
-  bottom: 0px;
-  top: -115px;
-  left: 0px;
-  right: 0px;
-}
-

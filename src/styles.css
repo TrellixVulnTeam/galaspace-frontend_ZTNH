@@ -1,26 +1,49 @@
 /* Material Icons Added */
-@import 'material-icons/iconfont/material-icons.css';
+@import "material-icons/iconfont/material-icons.css";
 
 /* Color variables */
-:root{
-    --purpleG: #3e2669;
-    --blueG: #5c4e9a;
-    --pinkG: #ED1f7F;
-   
+:root {
+  --purpleG: #3e2669;
+  --blueG: #5c4e9a;
+  --pinkG: #ed1f7f;
 }
 
 /* Background body */
-body{
-    background-color: rgb(245, 245, 245);
+body {
+  background-color: rgb(245, 245, 245);
 }
 
 /*Fonts added*/
 @font-face {
-    font-family: 'Arial';
-    src: url("/assets/fonts/arial.ttf");
+  font-family: "Arial";
+  src: url("/assets/fonts/arial.ttf");
 }
 
 @font-face {
-    font-family: 'Arial Rounded MT';
-    src: url("/assets/fonts/arial-rounded-mt.ttf");
+  font-family: "Arial Rounded MT";
+  src: url("/assets/fonts/arial-rounded-mt.ttf");
 }
+
+/* Custom scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgb(216, 216, 216);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5c4e9a77;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blueG);
+}
+
