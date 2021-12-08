@@ -61,7 +61,6 @@ import { AppRoutingModule } from './app-routing.module';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatNativeDateModule,

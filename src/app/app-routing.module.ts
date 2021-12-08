@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'register', component: LoginGenComponent, pathMatch: 'full', canActivate: [NotAccessOnLoginGuard]},
   {path: 'reenviar-email', component: LoginGenComponent, pathMatch: 'full', canActivate: [NotAccessOnLoginGuard]},
   {path: 'forgot-password', component: LoginGenComponent, pathMatch: 'full', canActivate: [LoginGuard]},
-  {path: 'home', component: HomeComponent, canActivate: [LoginGuard]},
+  {path: 'home', component: HomeComponent},
   {path: 'profile', component: ProfilePageComponent},
   {path: '**', redirectTo: 'home'},
 ];

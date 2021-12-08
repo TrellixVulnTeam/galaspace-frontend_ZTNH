@@ -86,8 +86,6 @@
     padding-bottom: 2% !important;
     border-bottom: 2px #5A5858 solid;
 }
-<<<<<<< HEAD
-=======
 /*MOTO G4  360PX TO 640PX*/
 @media (min-width:360px) and (max-width:640px) {
     .p-request{
@@ -312,4 +310,3 @@
         color: #fff;
     }
 }
->>>>>>> b4741eef0bd9c280816f6f4cc8d3537bf5e8ae2c
