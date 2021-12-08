@@ -32,15 +32,14 @@
 .d-userImage{
     display: flex;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
 }
 .img-user{
     width:fit-content;
     object-fit: cover;
     border-radius: 100px;
-    background-color: rgba(207, 6, 140, 0.74);
     transition: .5s;
 }
 .p-userName{
@@ -81,6 +80,7 @@
 }
 #btn-accept{
     margin-right: 5%;
+    height: 40px;
 }
 .d-buttons{
     padding-bottom: 2% !important;
@@ -97,14 +97,19 @@
     }
     .d-friendsList {
         width: 100%;
+        
     }
     .d-userName{
-       padding-top: 4%;}
+       padding-top: 5% !important;}
     .p-userName{
         font-size: 1rem;
     }
-    .img-user{
-        width: 80%;
+    .d-userImage{
+        display: flex;
+        justify-content: center;
+        width: 70px;
+        height: 60px;
+        border-radius: 50%;
     }
     .p-userName{
         width: fit-content;
@@ -158,8 +163,18 @@
         transform:none;
         transition: .5s;
     }
+    .d-userName{
+        padding-top: 4%;
+    }
     .p-userName:active{
         transform: translateY(5px);
+    }
+    .d-userImage{
+        display: flex;
+        justify-content: center;
+        width: 70px;
+        height: 80px;
+        border-radius: 50%;
     }
     .img-user:hover{
         cursor: pointer;
@@ -203,6 +218,13 @@
     }
     .d-friendsList {
         width: 100%;
+    }
+    .d-userImage{
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
     }
     .d-userName{
        padding-top: 4%;}
@@ -254,6 +276,17 @@
         color: #fff;
     }
 }
+@media (min-width:414px) and (max-width:736px) {
+    .d-userImage{
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 55px;
+        border-radius: 50%;
+    }
+    .d-userName{
+        padding-top: 4% !important;}
+}
 /*SURFACE DUO  540PX TO 720PX*/
 @media (min-width:540px) and (max-width:720px) {
     .p-request{
@@ -262,6 +295,13 @@
     .b-request{
         font-size:0.7rem !important;
         width: 20% !important;
+    }
+    .d-userImage{
+        display: flex;
+        justify-content: center;
+        width: 80px;
+        height: 60px;
+        border-radius: 50%;
     }
     .d-friendsList {
         width: 100%;

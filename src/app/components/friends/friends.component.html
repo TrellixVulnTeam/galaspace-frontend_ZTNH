@@ -4,17 +4,24 @@
       <p class="p-friends">10 amigos</p>
     </div>
     <div class="d-flex col-lg-6 justify-content-end">
-      <button class="b-request" type="submit">Solicitudes</button>
+      <button class="b-request" type="submit" routerLink="/request">
+        Solicitudes
+      </button>
     </div>
   </div>
   <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓AQUI DEBAJO COMIENZA EL *NGFOR↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-  <div class="d-friendsList d-flex flex-row p-0">
+  <div
+    class="d-friendsList d-flex flex-row p-0"
+    *ngFor="let ide of lista; let indexOfelement = index"
+  >
     <div class="col-2 p-lg-0 d-userImage">
-      <img
-        class="img-fluid img-user"
-        src="../../../assets/friends/YO.png"
-        alt=""
-      />
+      <div class="d-userImage2">
+        <img
+          class="img-fluid img-user"
+          src="../../../assets/friends/11HISOKA.jpg"
+          alt=""
+        />
+      </div>
     </div>
     <div class="col-6 d-userName">
       <p class="p-userName">Usuario Angel</p>
@@ -26,6 +33,7 @@
         height="40.95"
         viewBox="0 0 37.855 30.95"
         id="icono"
+        (click)="goToChat(indexOfelement)"
       >
         <path
           id="ic_textsms_24px"
