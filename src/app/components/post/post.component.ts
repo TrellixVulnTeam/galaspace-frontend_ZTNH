@@ -1,5 +1,5 @@
 import { Post } from './../../interfaces/post';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -9,8 +9,11 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class PostComponent implements OnInit {
 
+  @Input()
+  isMine!: boolean;
 
   posts: Post[] = [];
+  lovedPost: number[] = [];
 
   constructor(private postService: PostService) { }
 
@@ -26,6 +29,9 @@ export class PostComponent implements OnInit {
     this.postService.addMorePost();
   }
 
+  loved(i: number){
+    this.lovedPost.push(i);    
+  }
  
 
 }

@@ -47,6 +47,7 @@ export class CreatePostComponent implements OnInit {
   deletePhoto(): void {
     this.image = null;
     this.preview = null;
+    this.imageURL = "";
   }
 
   setValuesPostForm(): void {
@@ -79,6 +80,7 @@ export class CreatePostComponent implements OnInit {
       picture_post: this.imageURL,
     }
     this.postService.posts.unshift(this.newPost);
+
   }
 
   createPost(): void {
@@ -115,6 +117,8 @@ export class CreatePostComponent implements OnInit {
     }else {
       this.createPost();
     }
+    console.log(this.postService.posts);
+    
     
   }
 

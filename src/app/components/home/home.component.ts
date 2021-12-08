@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   onScrollDown() {
-    this.addItems();
+    this.addItems();    
   }
 
   addItems() {

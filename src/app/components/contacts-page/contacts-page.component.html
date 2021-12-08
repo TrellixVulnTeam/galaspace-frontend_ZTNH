@@ -5,8 +5,12 @@
     <app-search></app-search>
   </div>
   <div class="col-lg-6 offset-lg-3">
-    <p id="title-create-publication">Mi Perfil</p>
-    <app-profile [isMine]="true"></app-profile>
+    <div class="d-flex justify-content-between">
+      <p id="title-create-publication">Mis Amigos</p>
+      <button id="button-request">Solicitudes</button>
+    </div>
+    <app-friends></app-friends>
+    <app-request></app-request>
   </div>
   <div class="col-lg-3 d-none d-lg-block fixed offset-lg-9">
     <p id="subtitle">Contactos</p>
