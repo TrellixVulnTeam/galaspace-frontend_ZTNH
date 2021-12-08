@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestFriendsService } from 'src/app/services/request-friends.service';
 
 @Component({
   selector: 'app-request',
@@ -7,9 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestComponent implements OnInit {
 
-  constructor() { }
+  request:any=[];
+
+  constructor(private requestService: RequestFriendsService) { }
 
   ngOnInit(): void {
+    this.getRequest();
+  }
+
+
+  getRequest(){
+    this.requestService.getFriendsRequest().subscribe(r=>{
+      this.request=r;
+      console.log(this.request)
+    })
+  }
+
+  acceptFriend(ide:number){
+    this.requestService.addFriend(ide);
+    //remove of friends list
+    console.log(ide);
+  }
+
+  declineFriend(ide:number){
+    const requests = this.getRequest()
+    this.requestService.deleteFriend(ide).subscribe();
+    console.log(requests);
   }
 
 }

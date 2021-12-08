@@ -2,6 +2,9 @@
     font-family: Arial;
     padding-top: 1%;
 }
+.d-friendsList {
+    margin-top: 5%;
+}
 .d-second{
     margin-bottom: 2%;
 }
@@ -17,7 +20,7 @@
     height: fit-content; */
     border: 2px #E71F76 solid;
     transition: .4s;
-    font-family: 'Arial Rounded MT ';
+    font-family: 'Arial Rounded MT';
 }
 .b-request:hover{
     color: #fff;
@@ -43,8 +46,7 @@
     padding-top: 2%;
 }
 .d-icon{
-    padding-top: 3%;
-    
+    padding-top: 3%;  
 }
 .p-userName{
     width: fit-content;
@@ -64,4 +66,161 @@
 }
 .img-user:active{
     transform: translateY(5px);
+}
+#icono, #icono2{
+    cursor: pointer;
+    transition: .5s;
+}
+#icono:active{
+    transform: translateY(5px);
+}
+#icono2:active{
+    transform: translateY(5px);
+}
+
+/*MOTO G4  360PX TO 640PX*/
+@media (min-width:360px) and (max-width:640px) {
+    .p-friends{
+        font-size:1rem;
+    }
+    .b-request{
+        font-size:0.8rem;
+        width: fit-content;
+    }
+    .d-friendsList {
+        width: 100%;
+    }
+    .d-userName{
+       padding-top: 4%;}
+    .p-userName{
+        font-size: .9rem;
+    }
+    .img-user{
+        width: 80%;
+    }
+    .d-icon{
+        padding-top: 2%;
+    }
+    #icono{
+        width: 40%;
+    }
+    #icono2{
+        width: 30%;
+    }
+    .p-userName{
+        width: fit-content;
+    }
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+    .b-request{
+        font-size:1.5rem;
+        color: #E71F76;
+        border-radius: 50px;
+        width: 170px;/* 
+        height: fit-content; */
+        border: 2px #E71F76 solid;
+        transition: .4s;
+        font-family: 'Arial Rounded MT';
+        background-color: #fff;
+    }
+    .b-request:hover{
+        color: #E71F76;
+        background-color: #fff;
+        transition: .4s;
+        cursor:pointer;
+    }
+    .b-request:active{
+        transform: translateY(4px);
+        background-color: #E71F76;
+        color: #fff;
+    }
+}
+/*IPHONE 5/SE 320PX TO 568PX*/
+@media (min-width:320px) and (max-width:568px) {
+    .p-friends{
+        font-size:1rem;
+    }
+    .b-request{
+        font-size:0.8rem;
+        width: fit-content;
+    }
+    .d-friendsList {
+        width: 100%;
+    }
+    .d-userName{
+       padding-top: 4%;}
+    .p-userName{
+        font-size: .9rem;
+    }
+    .img-user{
+        width: 80%;
+    }
+    .d-icon{
+        padding-top: 2%;
+    }
+    #icono{
+        width: 40%;
+    }
+    #icono2{
+        width: 30%;
+    }
+    .p-userName{
+        width: fit-content;
+    }
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+}
+/*IPAD 748PX TO 1024PX*/
+@media (min-width:768px) and (max-width:1024px) {
+   
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+}
+/*SURFACE DUO 540PX TO 720PX*/
+@media (min-width:540px) and (max-width:720px) {
+    .p-userName{
+        font-size: 1.3rem;
+    }
 }
