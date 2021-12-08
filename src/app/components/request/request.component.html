@@ -1,27 +1,32 @@
 <div class="container" id="general">
+  <div *ngFor="let req of request; let indexOfelement = index">
+    <p>{{ req.id }}</p>
+    <p (click)="acceptFriend(req.id)">asas</p>
+    <p (click)="declineFriend(req.id)">res</p>
+  </div>
   <div>
     <div class="d-flex col-lg-6">
-      <p class="p-request"><b>Solicitudes</b></p>
+      <p class="p-request">Solicitudes</p>
     </div>
     <div class="d-block d-requesList">
       <div class="d-friendsList d-flex flex-row p-0">
         <div class="col-2 p-lg-0 d-userImage">
           <img
             class="img-fluid img-user"
-            src="../../../assets/friends/YO.png"
+            src="../../../assets/friends/den1.jpeg"
             alt=""
           />
         </div>
         <div class="col-6 d-userName">
-          <p class="p-userName"><b>Usuario Angel</b></p>
+          <p class="p-userName">Denisse Medina</p>
         </div>
       </div>
       <div class="d-flex justify-content-end p-0 d-buttons">
         <button id="btn-accept" class="b-request p-0" type="submit">
-          <b>Aceptar</b>
+          Aceptar
         </button>
         <button id="btn-decline" class="b-request p-0" type="submit">
-          <b>Rechazar</b>
+          Rechazar
         </button>
       </div>
     </div>

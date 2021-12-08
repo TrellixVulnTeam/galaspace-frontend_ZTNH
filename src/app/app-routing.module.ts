@@ -7,7 +7,7 @@ import { LoginGenComponent } from './components/login-gen/login-gen.component';
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent, pathMatch: 'full'},
-  //{path: '**', redirectTo: 'home'},
+  {path: '**', redirectTo: 'home'},
 ];
 
 @NgModule({

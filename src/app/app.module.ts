@@ -16,6 +16,8 @@ import { FriendsComponent } from './components/friends/friends.component';
 import { RequestComponent } from './components/request/request.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginGenComponent } from './components/login-gen/login-gen.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +29,6 @@ import { LoginGenComponent } from './components/login-gen/login-gen.component';
     ChatComponent,
     FriendsComponent,
     RequestComponent,
-
     CreatePostComponent,
     SearchComponent,
     ContactsComponent,
@@ -37,7 +38,10 @@ import { LoginGenComponent } from './components/login-gen/login-gen.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
