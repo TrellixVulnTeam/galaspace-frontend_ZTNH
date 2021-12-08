@@ -21,6 +21,9 @@
   font-weight: normal;
   font-size: 1.1  rem;
 }
+mat-form-field{
+  width: 100%;
+}
 
 #email, #password{
   border-style: solid;

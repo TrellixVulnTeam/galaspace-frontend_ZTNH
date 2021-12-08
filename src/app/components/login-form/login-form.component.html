@@ -3,7 +3,6 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
     <div class="mb-4">
       <input placeholder="Email" type="email" id="email" required formControlName="email"/>
-
       <p *ngIf="loginForm.get('email')!.invalid && (loginForm.get('email')!.dirty || loginForm.get('email')!.touched)" class="invalid">
         * Correo Invalido.
       </p>

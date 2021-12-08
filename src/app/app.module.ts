@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './components/post/post.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import { CommonModule } from '@angular/common';
 
   ],
   imports: [
+    HttpClientModule,
     MatSliderModule,
     FormsModule,
     CommonModule,
@@ -58,7 +61,8 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
