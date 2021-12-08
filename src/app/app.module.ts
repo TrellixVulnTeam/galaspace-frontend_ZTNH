@@ -26,6 +26,11 @@ import { PostComponent } from './components/post/post.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { TokenInterceptor } from './interceptors/token.interceptor';
+
+
 
 
 @NgModule({
@@ -44,7 +49,8 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     LoginGenComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
@@ -62,7 +68,9 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
