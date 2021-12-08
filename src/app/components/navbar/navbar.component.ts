@@ -7,26 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  options = ["home", "people" ,"account_circle", "question_answer"];
-
+  outlinedOne: boolean = false;
+  outlinedTwo: boolean = false;
+  outlinedThree: boolean = false;
+  outlinedFour: boolean = false;
   outlined: boolean = false;
-
-  index?: number;
-
-  favorite = "favorite_border";
+  favorite: string = "favorite_border";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  changeClass(i: number): void {
-    this.outlined = !this.outlined;
-    this.index = i;
-  }
-
   changeFavorite(): void {
-    this.index = -1;
     this.outlined = !this.outlined
     this.outlined ? this.favorite = "favorite" : this.favorite = "favorite_border";
   }
