@@ -1,50 +1,46 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserCreated } from 'src/app/interfaces/user-created';
 import { AuthService } from 'src/app/services/auth.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-register-form',
-  templateUrl: './register-form.component.html',
-  styleUrls: ['./register-form.component.css']
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.css']
 })
-export class RegisterFormComponent implements OnInit {
-  registerForm!: FormGroup;
+export class ForgotPasswordComponent implements OnInit {
+
+  passwordForm!: FormGroup;
   constructor(private fb: FormBuilder, private router:Router, private authService: AuthService) {}
 
   ngOnInit() {
-    this.registerForm = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+    this.passwordForm = this.fb.group({
       password: ['', Validators.required],
       password_confirmation: ['', Validators.required],
     }, {validators: this.checkPasswords});
   }
   get f(){
-    return this.registerForm.controls;
+    return this.passwordForm.controls;
   }
-
+  onResetPassword() {
+    localStorage.removeItem('token_login');
+    this.router.navigate(['/login']);
+  }
   onSubmit(form: FormGroup) {
     if (form.invalid) {
-      return Object.values(this.registerForm.controls).forEach(control => {
+      return Object.values(this.passwordForm.controls).forEach(control => {
         control.markAsTouched()
       });
     } else {
-      this.authService.signUp(this.registerForm.value).subscribe(
+      this.authService.actualizarContrasena(this.passwordForm.value).subscribe(
         (res) => {
-          if (res.status === true) {
             Swal.fire({
               icon: 'success',
               title: 'Listo!',
-              text: 'Se te ha enviado un correo para confirmar tu cuenta.',
-              footer: '<p>¿No has recibido el correo? <a href="" style="color: #3E2669;font-family: Arial Rounded MT Bold;">Reenviar</a><p>'
-            }).then(() => {
-              this.router.navigate(['/login'])
+              text: 'Contraseña actualizada con exito',
             })
-          }
-
+          this.onResetPassword()
         } ,
         (err) => {
           Swal.fire({
@@ -55,7 +51,7 @@ export class RegisterFormComponent implements OnInit {
         }
 
       );
-        console.log(this.registerForm.value);
+        console.log(this.passwordForm.value);
     }
 
   }
@@ -66,7 +62,4 @@ export class RegisterFormComponent implements OnInit {
     return pass === confirmPass ? null : { notSame: true };
 
   }
-
-
-
 }

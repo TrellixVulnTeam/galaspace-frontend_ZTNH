@@ -26,7 +26,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './components/post/post.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { TokenInterceptor } from './interceptors/token.interceptor';
+
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     LoginGenComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
@@ -64,7 +68,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
