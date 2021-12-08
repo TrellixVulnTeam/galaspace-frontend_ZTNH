@@ -2,10 +2,12 @@
   class="col-12 d-flex p-2 align-items-center justify-content-center d-infoUser"
 >
   <div class="col-11 d-flex align-items-center p-1">
-    <div class="col-1">
-      <img class="img-user" src="../../../assets/friends/YO.png" alt="" />
+    <div class="col-2 d-contImage">
+      <div class="d-userImage2">
+        <img class="img-user" src="../../../assets/friends/den.jpeg" alt="" />
+      </div>
     </div>
-    <p class="name-user col-4">Bibimbade Ocxocopolis</p>
+    <p class="name-user col-8">Bibimbade Ocxocopolis</p>
   </div>
 </div>
 <div
@@ -23,7 +25,7 @@
     </p>
   </div>
   <form (submit)="emitSendMessage()">
-    <div class="d-flex col-lg-10 d-insertTxt">
+    <div class="d-flex col-10 d-insertTxt">
       <input
         [(ngModel)]="newMessage"
         [ngModelOptions]="{ standalone: true }"

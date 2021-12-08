@@ -1,3 +1,7 @@
+#general{
+    background-image: url('../../../assets/friends/plantilla3.png');
+    
+}
 .d-insertTxt{
     background-color: #fff;
     border:1px #5C4E9A solid;
@@ -63,8 +67,20 @@ outline: none;
     word-wrap: break-word;
     
 }
+.d-userImage2{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    
+}
+.d-contImage{
+    width: 7%;
+}
 .img-user{
-    width: 80%;
+    width: 100%;
+    object-fit: cover;
     border-radius: 100px;
     background-color: rgba(207, 6, 140, 0.74);
     transition: .5s;
@@ -80,4 +96,117 @@ outline: none;
     transform: scale(.95);
 }
 
+/*MOTO G4  360PX TO 640PX*/
+@media (min-width:360px) and (max-width:640px) {
+    .name-user{
+       font-size:0.8rem;
+       padding-top: 10px;
+    }
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: turquoise;
+    }
+    .d-contImage{
+        width: 13%;
+    }
+    .img-user{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+        background-color: rgba(207, 6, 140, 0.74);
+        transition: .5s;
+        cursor: pointer;
+    }
+    .input{
+        margin-top: 1%;
+        width: 80%;
+        margin-left: 3%;
+        height: 30px;
+    }
+    .chat-container{
+        padding-top: 65px;
+    }
 
+}
+/*IPHONE 5/SE 320PX TO 568PX*/
+@media (min-width:320px) and (max-width:568px) {
+    .chat-container{
+        padding-top: 65px;
+    }
+    .name-user{
+        font-size:0.8rem;
+        padding-top: 10px;
+     }
+     .d-userImage2{
+         display: flex;
+         justify-content: center;
+         height: 30px;
+         width: 30px;
+         border-radius: 50%;
+         background-color: turquoise;
+     }
+     .d-contImage{
+         width: 13%;
+     }
+     .img-user{
+         width: 100%;
+         object-fit: cover;
+         border-radius: 100px;
+         background-color: rgba(207, 6, 140, 0.74);
+         transition: .5s;
+         cursor: pointer;
+     }
+     .input{
+         margin-top: 1%;
+         width: 80%;
+         margin-left: 3%;
+         height: 30px;
+     }
+}
+/*IPAD 748PX TO 1024PX*/
+@media (min-width:768px) and (max-width:1024px) {
+
+    .input{
+        margin-top: .5%;
+        width: 88%;
+        margin-left: 1%;
+        height: 30px;
+    }
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: turquoise;
+    }
+    .d-contImage{
+        width: 10%;
+    }
+    .img-user{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+        background-color: rgba(207, 6, 140, 0.74);
+        transition: .5s;
+        cursor: pointer;
+    }
+}
+/*SURFACE DUO 540PX TO 720PX*/
+@media (min-width:540px) and (max-width:720px) {
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: turquoise;
+    }
+    .d-contImage{
+        width: 10%;
+    }
+}
