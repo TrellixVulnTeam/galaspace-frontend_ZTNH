@@ -1,1 +1,41 @@
-<div class="container"></div>
+<div
+  class="col-12 d-flex p-2 align-items-center justify-content-center d-infoUser"
+>
+  <div class="col-11 d-flex align-items-center p-1">
+    <div class="col-1">
+      <img class="img-user" src="../../../assets/friends/YO.png" alt="" />
+    </div>
+    <p class="name-user col-4">Bibimbade Ocxocopolis</p>
+  </div>
+</div>
+<div
+  id="general"
+  #scrollMee
+  class="chat-container"
+  [scrollTop]="scrollMee.scrollHeight"
+>
+  <div class="col-12 d-msj p-3" *ngFor="let msj of chat.chats">
+    <p
+      class="p-msj p-3"
+      [ngClass]="{ sent: msj.msjId === 1, received: msj.msjId === 2 }"
+    >
+      {{ msj.newMessage }}
+    </p>
+  </div>
+  <form (submit)="emitSendMessage()">
+    <div class="d-flex col-lg-10 d-insertTxt">
+      <input
+        [(ngModel)]="newMessage"
+        [ngModelOptions]="{ standalone: true }"
+        type="text"
+        class="col-11 input"
+        placeholder="Escribe..."
+      />
+      <button class="button col-1" type="button" id="button-addon2">
+        <span class="material-icons-round p-1 but" (click)="emitSendMessage()">
+          send
+        </span>
+      </button>
+    </div>
+  </form>
+</div>
