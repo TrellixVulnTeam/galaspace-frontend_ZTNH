@@ -1,3 +1,10 @@
+#container-requests{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.125);
+    border-radius: 15px;
+}
+
 *{
     font-family: Arial;
     padding-top: 1%;
@@ -6,7 +13,7 @@
     margin-bottom: 2%;
 }
 .p-request{
-    font-size:1.5rem;
+    font-size:20px;
     color: #3E2669;
     
 }
@@ -44,7 +51,7 @@
 }
 .p-userName{
     color: #3E2669;
-    font-size: 2.0rem;
+    font-size:20px;
     transition: .5s;
     
     margin-left: 7%;
@@ -79,9 +86,21 @@
     margin-top: 6%;
 }
 #btn-accept{
+    
+    background: transparent;
     margin-right: 5%;
+    font-size: 20px;
     height: 40px;
 }
+#btn-decline{
+    
+    background: transparent;
+    margin-right: 5%;
+    font-size: 20px;
+    height: 40px;
+}
+
+
 .d-buttons{
     padding-bottom: 2% !important;
     border-bottom: 2px #5A5858 solid;

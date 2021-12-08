@@ -1,3 +1,4 @@
+import { ProfileFriendComponent } from './components/profile-friend/profile-friend.component';
 import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgModule } from '@angular/core';
@@ -29,7 +30,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { AppRoutingModule } from './app-routing.module';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { MessagesPageComponent } from './components/messages-page/messages-page.component';
+import { ContactsPageComponent } from './components/contacts-page/contacts-page.component';
+import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
+import { ChatPageComponent } from './components/chat-page/chat-page.component';
 
 
 
@@ -52,6 +57,12 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     ProfileComponent,
     ProfilePageComponent,
+    ProfileFriendComponent,
+    MessagesPageComponent,
+    ContactsPageComponent,
+    FavouritesPageComponent,
+    ChatPageComponent,
+ 
 
   ],
   imports: [
@@ -67,6 +78,7 @@ import { AppRoutingModule } from './app-routing.module';
     MatInputModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    InfiniteScrollModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }

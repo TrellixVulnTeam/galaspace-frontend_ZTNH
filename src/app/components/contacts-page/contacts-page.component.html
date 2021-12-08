@@ -5,8 +5,12 @@
     <app-search></app-search>
   </div>
   <div class="col-lg-6 offset-lg-3">
-    <p id="title-create-publication">Mi Perfil</p>
-    <app-profile [isMine]="true"></app-profile>
+    <div class="d-flex justify-content-between">
+      <p id="title-create-publication">{{ showRequest? "Solicitudes":"Mis amigos"}}</p>
+      <button id="button-request" (click)="showRequest = !showRequest">{{ showRequest? "Amigos":"Solicitudes"}}</button>
+    </div>
+    <app-friends *ngIf="!showRequest"></app-friends>
+    <app-request *ngIf="showRequest"></app-request>
   </div>
   <div class="col-lg-3 d-none d-lg-block fixed offset-lg-9">
     <p id="subtitle">Contactos</p>

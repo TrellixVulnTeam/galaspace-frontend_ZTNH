@@ -1,0 +1,35 @@
+#container-home{
+    padding: 125px 0px 0px 0px;
+    margin: 0px;
+}
+#title-create-publication{
+    font-size: 18.5px;
+    color: var(--purpleG);
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+
+#subtitle{
+    font-size: 18.5px;
+    color: gray;
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+.fixed{
+    position: fixed;
+}
+
+#button-request{
+    background: transparent;
+    border: 1px solid var(--pinkG);
+    border-radius: 100px;
+    color: var(--pinkG);
+    font-family: 'Arial Rounded MT';
+    margin-bottom: 5px;
+}
+#button-request:hover{
+    background-color: var(--pinkG);
+    color: white;
+}

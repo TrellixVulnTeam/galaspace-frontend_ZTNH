@@ -1,4 +1,4 @@
-<div id="container-post" *ngFor="let post of posts" >
+<div id="container-post" *ngFor="let post of posts; let i = index" >
     <div class="p-4 d-flex align-items-center justify-content-between">
         <div class="d-flex">
             <img 
@@ -9,7 +9,7 @@
             >
             <p id="name">{{post.name}}</p>     
         </div>
-        <div class="dropdown">
+        <div class="dropdown" *ngIf="isMine">
             <button type="button" id="dropdown-menu" data-bs-toggle="dropdown" aria-expanded="false">
                 <span class="material-icons">
                     more_vert
@@ -48,9 +48,9 @@
             <button class="flat-button">
                 {{"Comentarios  "+post.comments_quantity}}
             </button>
-            <button id="favorite-button">
+            <button id="favorite-button" (click)="loved(i)">
                 <span class="material-icons">
-                    favorite_border
+                    {{lovedPost.includes(i) || isLoved ? "favorite": "favorite_border"}}
                 </span>
             </button>
         </div>

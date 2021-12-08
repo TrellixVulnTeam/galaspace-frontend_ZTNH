@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, AfterViewChecked,DoCheck } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, AfterViewChecked,DoCheck, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Monami } from 'src/app/interfaces/Monami';
 import { ChatService } from 'src/app/services/chat.service';
@@ -10,7 +10,8 @@ import { ChatService } from 'src/app/services/chat.service';
 })
 export class ChatComponent implements OnInit, AfterViewChecked,DoCheck {
   @ViewChild('scrollMe') private myScrollContainer: ElementRef | undefined;
-
+  @Input() 
+  ide!: number;
   
   Lis!: Monami;
 
@@ -36,8 +37,8 @@ export class ChatComponent implements OnInit, AfterViewChecked,DoCheck {
 
 
   ngOnInit(): void {
-    let iP=this.activeRoute.snapshot.params;
-    console.log("parametros",iP['ide'])
+   /*  let iP=this.activeRoute.snapshot.params;
+    console.log("parametros",iP['ide']) */
   }
 
   emitSendMessage(){

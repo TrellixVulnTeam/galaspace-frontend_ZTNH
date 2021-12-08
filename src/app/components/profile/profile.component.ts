@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -7,6 +7,9 @@ import { PostService } from 'src/app/services/post.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+
+  @Input()
+  isMine!: boolean;
 
   constructor(private postService: PostService) { }
 

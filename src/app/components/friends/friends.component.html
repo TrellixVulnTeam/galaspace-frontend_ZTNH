@@ -1,4 +1,4 @@
-<div id="general" class="container">
+<!-- <div id="general" class="container">
   <div class="d-flex justify-content-between w-100 col-lg-12 d-second">
     <div class="d-flex col-lg-6">
       <p class="p-friends">10 amigos</p>
@@ -8,12 +8,9 @@
         Solicitudes
       </button>
     </div>
-  </div>
+  </div> -->
   <!--↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓AQUI DEBAJO COMIENZA EL *NGFOR↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓-->
-  <div
-    class="d-friendsList d-flex flex-row p-0"
-    *ngFor="let ide of lista; let indexOfelement = index"
-  >
+  <div routerLink="/person" class="d-friendsList d-flex flex-row p-0 align-items-center" id="container-friend" *ngFor="let _ of [0,1,2,3,5,6,7,8,9,10]; let i = index" style="cursor: pointer;">
     <div class="col-2 p-lg-0 d-userImage">
       <div class="d-userImage2">
         <img
@@ -26,14 +23,13 @@
     <div class="col-6 d-userName">
       <p class="p-userName">Usuario Angel</p>
     </div>
-    <div class="col-2 d-flex justify-content-center d-icon">
+    <div class="icon-margin" (click)="goToChat(i)">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="45.855"
-        height="40.95"
+        width="30"
+        height="30"
         viewBox="0 0 37.855 30.95"
         id="icono"
-        (click)="goToChat(indexOfelement)"
       >
         <path
           id="ic_textsms_24px"
@@ -43,11 +39,11 @@
         />
       </svg>
     </div>
-    <div class="col-2 d-flex justify-content-center d-icon">
+    <div class="">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="40.317"
-        height="45.95"
+        width="30"
+        height="30"
         viewBox="0 0 24.317 30.95"
         id="icono2"
       >
@@ -61,4 +57,3 @@
     </div>
   </div>
   <!--↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑AQUI TERMINA EL *NGFOR  ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑-->
-</div>

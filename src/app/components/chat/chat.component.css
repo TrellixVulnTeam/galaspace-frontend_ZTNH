@@ -1,14 +1,14 @@
 #general{
     background-image: url('../../../assets/friends/plantilla3.png');
-    
+    max-height: 40%;
+    border-radius: 15px;
 }
 .d-insertTxt{
     background-color: #fff;
     border:1px #5C4E9A solid;
     border-radius: 50px;
     padding-left: 2%;
-    bottom: 2%;
-    position: fixed;
+    bottom: 2px;
     width: 90%;
     margin-left: 5%;
 }
@@ -90,7 +90,6 @@ outline: none;
     background-color: var(--purpleG);
     color: #fff;
     font-size: 1.5em;
-    position: fixed;
 }
 .img-user:active{
     transform: scale(.95);
