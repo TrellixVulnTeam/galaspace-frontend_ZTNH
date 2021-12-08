@@ -50,7 +50,7 @@
             </button>
             <button id="favorite-button" (click)="loved(i)">
                 <span class="material-icons">
-                    {{lovedPost.includes(i)? "favorite": "favorite_border"}}
+                    {{lovedPost.includes(i) || isLoved ? "favorite": "favorite_border"}}
                 </span>
             </button>
         </div>

@@ -8,6 +8,8 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class ContactsPageComponent implements OnInit {
 
+  showRequest = false;
+
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {

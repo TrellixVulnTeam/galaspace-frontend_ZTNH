@@ -45,11 +45,18 @@
 .b-request:active{
     transform: translateY(4px);
 }
+.d-userImage2{
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
 .img-user{
-    width: 60%;
+    width: fit-content;
     border-radius: 100px;
-    background-color: rgba(207, 6, 140, 0.74);
     transition: .5s;
+    object-fit:cover;
 }
 .p-userName{
     color: #3E2669;
@@ -57,7 +64,7 @@
     transition: .5s;
 }
 .d-userName{
-    padding-top: 2%;
+    padding-top: 3%;
 }
 .d-icon{
     padding-top: 3%;  
@@ -88,6 +95,9 @@
 #icono:active{
     transform: translateY(5px);
 }
+#icono:focus{
+    outline: none;
+}
 #icono2:active{
     transform: translateY(5px);
 }
@@ -96,6 +106,13 @@
 @media (min-width:360px) and (max-width:640px) {
     .p-friends{
         font-size:1rem;
+    }
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 40px;
+        border-radius: 50%;
     }
     .b-request{
         font-size:0.8rem;
@@ -165,6 +182,14 @@
 }
 /*IPHONE 5/SE 320PX TO 568PX*/
 @media (min-width:320px) and (max-width:568px) {
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        height: 40px;
+        border-radius: 50%;
+    }
+   
     .p-friends{
         font-size:1rem;
     }
@@ -214,6 +239,13 @@
 }
 /*IPAD 748PX TO 1024PX*/
 @media (min-width:768px) and (max-width:1024px) {
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
    
     .p-userName:hover{
         cursor: pointer;
@@ -237,4 +269,26 @@
     .p-userName{
         font-size: 1.3rem;
     }
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 50px;
+        border-radius: 50%;
+    }
+   
+}
+/*IPAD PRO 1024-1266*/
+@media (min-width:1024PX) and (max-width:1200px) {
+    .p-userName{
+        font-size: 1.3rem;
+    }
+    .d-userImage2{
+        display: flex;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+   
 }

@@ -8,6 +8,7 @@ export class ChatService {
 
   messageInfo="";
   chats:any=[];
+  lista:any=[];
 
   constructor(private socket:SocketService) { 
     this.onReceivedMessage();

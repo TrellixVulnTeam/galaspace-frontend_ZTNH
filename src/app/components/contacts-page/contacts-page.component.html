@@ -6,11 +6,11 @@
   </div>
   <div class="col-lg-6 offset-lg-3">
     <div class="d-flex justify-content-between">
-      <p id="title-create-publication">Mis Amigos</p>
-      <button id="button-request">Solicitudes</button>
+      <p id="title-create-publication">{{ showRequest? "Solicitudes":"Mis amigos"}}</p>
+      <button id="button-request" (click)="showRequest = !showRequest">{{ showRequest? "Amigos":"Solicitudes"}}</button>
     </div>
-    <app-friends></app-friends>
-    <app-request></app-request>
+    <app-friends *ngIf="!showRequest"></app-friends>
+    <app-request *ngIf="showRequest"></app-request>
   </div>
   <div class="col-lg-3 d-none d-lg-block fixed offset-lg-9">
     <p id="subtitle">Contactos</p>

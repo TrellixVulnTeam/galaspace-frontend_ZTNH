@@ -11,6 +11,9 @@ export class PostComponent implements OnInit {
 
   @Input()
   isMine!: boolean;
+  @Input()
+  isLoved?: boolean;
+  
 
   posts: Post[] = [];
   lovedPost: number[] = [];

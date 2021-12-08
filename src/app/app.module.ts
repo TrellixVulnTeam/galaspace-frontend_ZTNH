@@ -34,6 +34,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { MessagesPageComponent } from './components/messages-page/messages-page.component';
 import { ContactsPageComponent } from './components/contacts-page/contacts-page.component';
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
+import { ChatPageComponent } from './components/chat-page/chat-page.component';
 
 
 
@@ -60,6 +61,7 @@ import { FavouritesPageComponent } from './components/favourites-page/favourites
     MessagesPageComponent,
     ContactsPageComponent,
     FavouritesPageComponent,
+    ChatPageComponent,
  
 
   ],
