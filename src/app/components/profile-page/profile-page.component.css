@@ -1,0 +1,23 @@
+#container-home{
+    padding: 125px 0px 0px 0px;
+    margin: 0px;
+}
+#title-create-publication{
+    font-size: 18.5px;
+    color: var(--purpleG);
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+
+#subtitle{
+    font-size: 18.5px;
+    color: gray;
+    font-family: 'Arial';
+    font-weight: bold;
+}
+
+.fixed{
+    position: fixed;
+}
+

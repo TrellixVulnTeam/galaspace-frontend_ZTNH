@@ -1,18 +1,28 @@
 <div class="p-4" id="container-search">
-    <div class="d-flex">
-        <input type="text" name="input-search" id="input-search" placeholder="Escribe...">
-        <button id="btn-search">
-            <span class="material-icons">
-                search
-            </span>
-        </button>
-    </div>
-    <div class="d-flex justify-content-center align-items-center" id="container-results"> 
+    <form class="d-flex" [formGroup]="searchForm">
+        <div class="d-flex justify-content-center align-items-center"  id="container-input-search">
+            <span class="material-icons" id="icon-search">search</span>
+            <input type="text" name="input-search" placeholder="Escribe..." formControlName="searchPerson" id="input-search">
+            <span class="material-icons" id="icon-delete" *ngIf="showDeleteButton" (click)="deleteSearchContent()">cancel</span>
+        </div>
+
+    </form>
+    <div class="d-flex justify-content-center align-items-center" id="container-non-search" *ngIf="!showResults"> 
         <div class="text-center">
             <span id="icon-add-group" class="material-icons">
                 group_add
             </span>
             <p id="label">Encuentra más personas</p>
+        </div>
+    </div>
+    <div id="container-results" *ngIf="showResults">
+        <div class="d-flex align-items-center" id="result-item" *ngFor="let _ of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]">
+            <img 
+            src="https://sunrift.com/wp-content/uploads/2014/12/Blake-profile-photo-square.jpg"
+            alt="profile-picture-result"
+            id="profile-picture-result"
+            >
+            <p id="result-name">Name of contact</p>
         </div>
     </div>
 </div>

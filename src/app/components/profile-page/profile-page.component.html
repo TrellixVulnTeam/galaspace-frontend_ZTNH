@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="row" id="container-home" infinite-scroll (scrolled)="onScrollDown()" > 
+  <div class="col-lg-3 d-none d-lg-block fixed">
+    <p id="subtitle">Buscar</p>
+    <app-search></app-search>
+  </div>
+  <div class="col-lg-6 offset-lg-3">
+    <p id="title-create-publication">Mi Perfil</p>
+    <app-profile></app-profile>
+  </div>
+  <div class="col-lg-3 d-none d-lg-block fixed offset-lg-9">
+    <p id="subtitle">Contactos</p>
+    <app-contacts></app-contacts>
+  </div>
+</div>

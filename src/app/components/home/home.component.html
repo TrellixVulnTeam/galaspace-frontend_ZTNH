@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="row " id="container-home">
+<div class="row" id="container-home" infinite-scroll (scrolled)="onScrollDown()" > 
   <div class="col-lg-3 d-none d-lg-block fixed">
     <p id="subtitle">Buscar</p>
     <app-search></app-search>
