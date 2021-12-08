@@ -1,5 +1,5 @@
 .titulo{
-  font-family: Arial Rounded MT Bold;
+  font-family: Arial Rounded MT;
   font-style: normal;
   font-weight: normal;
   font-size: 3rem;
@@ -51,7 +51,7 @@ mat-form-field{
   color: #3E2669;
   border-radius: 30px;
   height: 50px;
-  font-family: Arial Rounded MT Bold;
+  font-family: Arial Rounded MT;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
