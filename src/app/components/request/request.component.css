@@ -14,10 +14,11 @@
     font-size:1.5rem;
     color: #E71F76;
     border-radius: 50px;
-    width: 170px;
-    height: fit-content;
-    border: 4px #E71F76 solid;
+    width: 170px;/* 
+    height: fit-content; */
+    border: 2px #E71F76 solid;
     transition: .4s;
+    font-family: 'Arial Rounded MT';
 }
 .b-request:hover{
     color: #fff;
@@ -28,8 +29,16 @@
 .b-request:active{
     transform: translateY(4px);
 }
+.d-userImage{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
 .img-user{
-    width: 60%;
+    width:fit-content;
+    object-fit: cover;
     border-radius: 100px;
     background-color: rgba(207, 6, 140, 0.74);
     transition: .5s;
@@ -38,6 +47,8 @@
     color: #3E2669;
     font-size: 2.0rem;
     transition: .5s;
+    
+    margin-left: 7%;
 }
 .d-userName{
     padding-top: 2%;
@@ -75,3 +86,230 @@
     padding-bottom: 2% !important;
     border-bottom: 2px #5A5858 solid;
 }
+<<<<<<< HEAD
+=======
+/*MOTO G4  360PX TO 640PX*/
+@media (min-width:360px) and (max-width:640px) {
+    .p-request{
+        font-size:1rem;
+    }
+    .b-request{
+        font-size:0.9rem !important;
+        width: 25% !important;
+    }
+    .d-friendsList {
+        width: 100%;
+    }
+    .d-userName{
+       padding-top: 4%;}
+    .p-userName{
+        font-size: 1rem;
+    }
+    .img-user{
+        width: 80%;
+    }
+    .p-userName{
+        width: fit-content;
+    }
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+    .b-request{
+        font-size:1.5rem;
+        color: #E71F76;
+        border-radius: 50px;
+        width: 170px;/* 
+        height: fit-content; */
+        border: 2px #E71F76 solid;
+        transition: .4s;
+        font-family: 'Arial Rounded MT';
+        background-color: #fff;
+    }
+    .b-request:hover{
+        color: #E71F76;
+        background-color: #fff;
+        transition: .4s;
+        cursor:pointer;
+    }
+    .b-request:active{
+        transform: translateY(4px);
+        background-color: #E71F76;
+        color: #fff;
+    }
+}
+/*IPAD MINI  768PX TO 1024PX*/
+@media (min-width:768px) and (max-width:1024px) {
+    .p-userName{
+        width: fit-content;
+    }
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+    .b-request{
+        font-size:1.5rem;
+        color: #E71F76;
+        border-radius: 50px;
+        width: 170px;/* 
+        height: fit-content; */
+        border: 2px #E71F76 solid;
+        transition: .4s;
+        font-family: 'Arial Rounded MT';
+        background-color: #fff;
+    }
+    .b-request:hover{
+        color: #E71F76;
+        background-color: #fff;
+        transition: .4s;
+        cursor:pointer;
+    }
+    .b-request:active{
+        transform: translateY(4px);
+        background-color: #E71F76;
+        color: #fff;
+    }
+}
+/*IPHONE 5/SE  320PX TO 568PX*/
+@media (min-width:320px) and (max-width:568px) {
+    .p-request{
+        font-size:1rem;
+    }
+    .b-request{
+        font-size:0.7rem !important;
+        width: 25% !important;
+    }
+    .d-friendsList {
+        width: 100%;
+    }
+    .d-userName{
+       padding-top: 4%;}
+    .p-userName{
+        font-size: 1rem;
+    }
+    .img-user{
+        width: 80%;
+    }
+    .p-userName{
+        width: fit-content;
+    }
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+    .b-request{
+        font-size:1.5rem;
+        color: #E71F76;
+        border-radius: 50px;
+        width: 170px;/* 
+        height: fit-content; */
+        border: 2px #E71F76 solid;
+        transition: .4s;
+        font-family: 'Arial Rounded MT';
+        background-color: #fff;
+    }
+    .b-request:hover{
+        color: #E71F76;
+        background-color: #fff;
+        transition: .4s;
+        cursor:pointer;
+    }
+    .b-request:active{
+        transform: translateY(4px);
+        background-color: #E71F76;
+        color: #fff;
+    }
+}
+/*SURFACE DUO  540PX TO 720PX*/
+@media (min-width:540px) and (max-width:720px) {
+    .p-request{
+        font-size:1rem;
+    }
+    .b-request{
+        font-size:0.7rem !important;
+        width: 20% !important;
+    }
+    .d-friendsList {
+        width: 100%;
+    }
+    .p-userName{
+        font-size: 1.2rem;
+    }
+    .img-user{
+        width: 70%;
+    }
+    .p-userName{
+        width: fit-content;
+    }
+    .p-userName:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .p-userName:active{
+        transform: translateY(5px);
+    }
+    .img-user:hover{
+        cursor: pointer;
+        transform:none;
+        transition: .5s;
+    }
+    .img-user:active{
+        transform: translateY(5px);
+    }
+    .b-request{
+        color: #E71F76;
+        border: 2px #E71F76 solid;
+        transition: .4s;
+        font-family: 'Arial Rounded MT';
+        background-color: #fff;
+    }
+    .b-request:hover{
+        color: #E71F76;
+        background-color: #fff;
+        transition: .4s;
+        cursor:pointer;
+    }
+    .b-request:active{
+        transform: translateY(4px);
+        background-color: #E71F76;
+        color: #fff;
+    }
+}
+>>>>>>> b4741eef0bd9c280816f6f4cc8d3537bf5e8ae2c

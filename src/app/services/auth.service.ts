@@ -6,24 +6,47 @@ import { BehaviorSubject, Observable, Subject, throwError } from 'rxjs';
 import { Login } from '../interfaces/login';
 import { catchError, map, timeout } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private apiURL = environment.apiURL;
   private loggedIn = new BehaviorSubject<boolean>(false);
-  constructor(private http: HttpClient) { }
-
+  constructor(private http: HttpClient) {
+    console.log("Constructor AuthService");
+    this.checkToken();
+  }
+  olvidoContrasena(email: string){
+    return this.http.post<any>(`${this.apiURL}reset-password/${email}`, null);
+  }
+  actualizarContrasena(formData: FormData){
+    return this.http.post<any>(`${this.apiURL}update-password`, formData);
+  }
+  confirmarCodigo(codigo: string, email: string){
+    return this.http.post<any>(`${this.apiURL}confirm-code`, {email: email,  reset_code: codigo}).pipe(
+      map((_response: any) => {
+        this.saveToken(_response.token.token);
+        console.log(_response.token.token);
+        this.loggedIn.next(true);
+        return _response;
+      })
+    );
+  }
   signUp(formSignUp: FormData) {
     return this.http.post<UserCreated>(`${this.apiURL}register`, formSignUp);
+  }
+
+  reenviarCorreo(email: string){
+    return this.http.post<any>(`${this.apiURL}resend-email/${email}`, null);
   }
 
   login(formLogin: Login): Observable<any> {
     return this.http.post(`${this.apiURL}login`, formLogin).pipe(
       map((_response: any) => {
         //console.log(_response);
-
         this.saveToken(_response.token.token);
+        this.loggedIn.next(true);
         // this.user = _response.user;
         // this.saveUserData(this.user);
         // this.dataUser.next(this.user);
@@ -87,6 +110,31 @@ export class AuthService {
 
   get isLogged(): Observable<boolean> {
     return this.loggedIn.asObservable();
+  }
+  checkToken(): void {
+
+    const Token = localStorage.getItem('token_login');
+    const existTokenLogin = Token ? true : false;
+    console.log(existTokenLogin);
+    // existTokenLogin ? this.loggedIn.next(true) : this.logout();
+    if(existTokenLogin){
+      this.loggedIn.next(true)
+      console.log("Si hay token");
+      let token = localStorage.getItem('token_login');
+      this.validateToken(token!.toString()).subscribe( _res => {
+        console.log("Si entra al sub");
+        if(_res.status == true){
+          this.loggedIn.next(_res.status)
+          console.log("Si es valido el token");
+        }else{
+          console.log("No es valido el token");
+          this.logout();
+        }
+      });
+    }else{
+      console.log("No hay token");
+      this.logout();
+    }
   }
 
 

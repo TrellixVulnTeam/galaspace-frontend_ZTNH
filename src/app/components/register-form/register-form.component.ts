@@ -28,7 +28,9 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit(form: FormGroup) {
     if (form.invalid) {
-      console.log('form is invalid');
+      return Object.values(this.registerForm.controls).forEach(control => {
+        control.markAsTouched()
+      });
     } else {
       this.authService.signUp(this.registerForm.value).subscribe(
         (res) => {
