@@ -1,6 +1,9 @@
 /* Material Icons Added */
 @import "material-icons/iconfont/material-icons.css";
 
+/* Sweet Alert Theme */
+
+
 /* Color variables */
 :root {
   --purpleG: #3e2669;
@@ -47,3 +50,6 @@ body {
   background: var(--blueG);
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

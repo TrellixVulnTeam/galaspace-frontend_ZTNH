@@ -1,6 +1,7 @@
 <nav>
   <div class="d-flex justify-content-around align-items-center p-3" id="navbar-container">
     <span
+      routerLink="/profile"
       [ngClass]="
         outlinedOne ? 'material-icons' : 'material-icons-outlined'
       "
@@ -18,7 +19,7 @@
     >
       people
     </span>
-    <img src="/assets/logo.png" alt="logo" id="logo">
+    <img src="/assets/logo.png" alt="logo" id="logo"  routerLink="/home">
     <span
       [ngClass]="
         outlinedThree ? 'material-icons' : 'material-icons-outlined'

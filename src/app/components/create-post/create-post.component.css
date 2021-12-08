@@ -78,3 +78,36 @@ mat-spinner{
 ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
     stroke: var(--pinkG);
 }
+::ng-deep .swal2-icon.swal2-success [class^=swal2-success-line]{
+    background-color: var(--pinkG);
+}
+
+::ng-deep .swal2-icon.swal2-error {
+    border-color: var(--pinkG) !important;
+}
+
+::ng-deep .swal2-icon.swal2-success .swal2-success-ring{
+    border: 0.25rem solid rgba(255, 31, 68, 0.514);
+}
+
+::ng-deep .swal2-styled.swal2-confirm{
+    border-radius: 100px;
+    background-color: var(--pinkG);
+    outline: none;
+    border: none;
+    font-family: 'Arial Rounded MT';
+}
+
+
+::ng-deep .swal2-styled.swal2-confirm:focus{
+    outline: none;
+}
+
+::ng-deep .swal2-container.swal2-center>.swal2-popup{
+    border-radius: 15px;
+}
+
+::ng-deep .mat-h2, .mat-title, .mat-typography h2{
+    font-family: 'Arial Rounded MT' !important;
+    margin: 0px;
+}

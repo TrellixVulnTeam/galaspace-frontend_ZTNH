@@ -1,1 +1,36 @@
-<p>profile works!</p>
+<div id="container-profile">
+  <div class="text-center p-4" id="container-header-profile">
+    <img
+      class="rounded-circle"
+      src="https://i.pinimg.com/564x/47/89/37/478937760d6ee8218729f32b7255f070.jpg"
+      alt="profile-picture"
+      id="profile-picture"
+    />
+    <p id="name">My Name</p>
+    <div class="d-flex justify-content-center" id="container-buttons">
+      <button class="profile-button d-flex align-items-center" id="btn-add">
+        Agregar
+        <span class="material-icons">add</span>
+      </button>
+      <button class="profile-button d-flex align-items-center" id="btn-add">
+        Enviar Mensaje&nbsp;
+        <span class="material-icons">question_answer</span>
+      </button>
+      <button class="profile-button d-flex align-items-center">
+        Editar&nbsp;
+        <span class="material-icons">edit</span>
+      </button>
+    </div>
+    <div class="d-flex justify-content-center" id="container-buttons">
+      <button class="tab-custom d-flex align-items-center" id="btn-add" (click)="setTabPosition(0)" [ngStyle]="{'border-bottom': showFirstTab? '2px solid #ed1f7f' : ''}">
+        Publicaciones
+      </button>
+      <button class="tab-custom d-flex align-items-center" (click)="setTabPosition(1)" [ngStyle]="{'border-bottom': showSecondTab? '2px solid #ed1f7f' : ''}">
+        List de amigos
+      </button>
+    </div>
+
+  </div>
+  <p id="title">Mis publicaciones</p>
+  <app-post></app-post>
+</div>

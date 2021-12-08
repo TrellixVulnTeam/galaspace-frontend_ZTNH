@@ -40,14 +40,14 @@
             (change)="captureFile($event)"
             >
             <button 
+                *ngIf="showPostButton"
                 id="btn-create-post" 
                 [disabled]="!postForm.valid"
                 (click)="onSubmit()"
             >
                 Publicar
             </button>
-            <button (click)="openSnackBar('aa', 'aa')">Show snack-bar</button>
-            <mat-spinner diameter="47"></mat-spinner>
+            <mat-spinner diameter="47" *ngIf="!showPostButton"></mat-spinner>
         </div>
     </form>
 </div>
