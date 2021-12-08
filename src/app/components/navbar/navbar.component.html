@@ -1,15 +1,32 @@
 <nav>
   <div class="d-flex justify-content-around align-items-center p-3" id="navbar-container">
     <span
-      *ngFor="let option of options; let i = index"
       [ngClass]="
-        outlined && index == i ? 'material-icons' : 'material-icons-outlined'
+        outlinedOne ? 'material-icons' : 'material-icons-outlined'
       "
-      [ngStyle]="i == 2 ? {'font-size':'60px'} : {'font-size':''}"
-      (mouseenter)="changeClass(i)"
-      (mouseleave)="changeClass(i)"
+      (mouseenter)="outlinedOne = true"
+      (mouseleave)="outlinedOne = false"
     >
-      {{ option }}
+      account_circle
+    </span>
+    <span
+      [ngClass]="
+      outlinedTwo ? 'material-icons' : 'material-icons-outlined'
+      "
+      (mouseenter)="outlinedTwo = true"
+      (mouseleave)="outlinedTwo = false"
+    >
+      people
+    </span>
+    <img src="/assets/logo.png" alt="logo" id="logo">
+    <span
+      [ngClass]="
+        outlinedThree ? 'material-icons' : 'material-icons-outlined'
+      "
+      (mouseenter)="outlinedThree = true"
+      (mouseleave)="outlinedThree = false"
+    >
+      question_answer
     </span>
     <span
       class="material-icons"

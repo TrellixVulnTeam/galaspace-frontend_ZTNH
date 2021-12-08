@@ -12,11 +12,15 @@
     margin-right: 10px;
 }
 #text-post{
-    border-radius: 100px;
     width: 100%;
     border: 1px solid gray;
-    padding: 15px;
     font-family: 'Arial';
+    resize: none;
+    display: flex;
+    padding: 15px;
+    overflow-y: hidden;
+    height: 50px;
+    border-radius: 1.50rem 1.50rem 1.50rem 1.50rem;
 }
 #text-post:focus{
     outline: none;
@@ -28,8 +32,8 @@
     border-radius: 100%;
     width: 50px;
     height: 50px;
-    padding-top: 5px;
     margin-top: 15px;
+    cursor: pointer;
 }
 #btn-select-img:hover{
     background-color: var(--pinkG);
@@ -49,4 +53,28 @@
 #btn-create-post:hover{
     background-color: var(--pinkG);
     color: white;
+}
+#labe-select-image{
+    cursor: pointer;
+}
+#container-img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#img-post{
+    width: 100%;
+    border-radius: 7.5px;
+}
+.btn-photo{
+    background: transparent;
+    color: var(--pinkG);
+    font-family: 'Arial Rounded MT';
+    border: none;
+}
+mat-spinner{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: var(--pinkG);
 }

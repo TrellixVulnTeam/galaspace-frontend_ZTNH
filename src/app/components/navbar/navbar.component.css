@@ -22,3 +22,12 @@ span:hover{
     cursor: pointer;
     transform: scale(1.25);
 }
+
+#logo{
+    width: 70px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+#logo:hover{
+    transform: scale(1.25);
+}

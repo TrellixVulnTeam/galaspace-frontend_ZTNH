@@ -1,21 +1,53 @@
 <div class="p-4" id="container-create-post">
-    <div class="d-flex">
-        <img 
-        class="img-fluid "
-        src="https://i.pinimg.com/564x/47/89/37/478937760d6ee8218729f32b7255f070.jpg"        
-        alt="profile-image"
-        id="profile-image"
-        >
-        <input type="text" name="text-post" id="text-post" placeholder="Expresa tus pensamientos...">
-    </div>
-    <div class="d-flex justify-content-end">
-        <button id="btn-select-img">
-            <span class="material-icons">
-            image
-            </span>
-        </button>
-        <button id="btn-create-post">
-            Publicar
-        </button>
-    </div>
+    <form [formGroup]="postForm">
+        <div class="d-flex">
+            <img 
+                class="img-fluid "
+                src="https://i.pinimg.com/564x/47/89/37/478937760d6ee8218729f32b7255f070.jpg"        
+                alt="profile-image"
+                id="profile-image"
+            >
+            <textarea 
+                type="text" 
+                name="text-post" 
+                id="text-post" 
+                formControlName="content"
+                placeholder="Expresa tus pensamientos..." 
+                (keypress)="autoGrowTextZone($event)" 
+                (keydown)="autoDeleteGrowTextZone($event)"
+                #inputPost
+            ></textarea>
+        </div>
+        <div *ngIf="preview" id="container-img">
+            <img [src]="preview" alt="image-post" id="img-post">
+        </div>   
+        <div *ngIf="preview" class="d-flex justify-content-end">
+            <button class="btn-photo" (click)="deletePhoto()">
+                Quitar
+            </button>
+        </div>
+        <div class="d-flex justify-content-end">
+            <label for="input-select-image" class="d-flex justify-content-center align-items-center" id="btn-select-img">
+                <span class="material-icons">
+                    image
+                </span>
+            </label>
+            <input 
+            id="input-select-image"
+            type="file"
+            accept="image/png, image/jpeg"
+            class="d-none"
+            (change)="captureFile($event)"
+            >
+            <button 
+                id="btn-create-post" 
+                [disabled]="!postForm.valid"
+                (click)="onSubmit()"
+            >
+                Publicar
+            </button>
+            <button (click)="openSnackBar('aa', 'aa')">Show snack-bar</button>
+            <mat-spinner diameter="47"></mat-spinner>
+        </div>
+    </form>
 </div>

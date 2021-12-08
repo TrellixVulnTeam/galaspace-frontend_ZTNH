@@ -16,6 +16,11 @@
     margin-top: 15px;
     margin-left: 15px;
 }
+
+.dropdown{
+    position: static;
+}
+
 #dropdown-menu{
     padding-top: 5px;
     background-color: transparent;

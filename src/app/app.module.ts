@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,11 +27,9 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginGenComponent } from './components/login-gen/login-gen.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostComponent } from './components/post/post.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
-
 
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     LoginGenComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    
+
 
   ],
   imports: [
@@ -52,13 +58,15 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule,
     BrowserModule,
+    
     AppRoutingModule,
-    BrowserAnimationsModule,
     MatFormFieldModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
