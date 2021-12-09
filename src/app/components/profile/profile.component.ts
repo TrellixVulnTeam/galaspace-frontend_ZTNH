@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   isMine!: boolean;
 
   showFriends = false;
+  showButtonRequest = false;
 
   constructor(private postService: PostService, private authService: AuthService, private router: Router) { }
 

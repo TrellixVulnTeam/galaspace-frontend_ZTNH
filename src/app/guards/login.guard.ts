@@ -39,7 +39,6 @@ export class LoginGuard implements CanActivate {
 
     this.redirect(isUserLogged);
 
-    console.log("login guard -->", isUserLogged);
 
 
     return isUserLogged;

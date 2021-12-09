@@ -50,3 +50,9 @@ body {
   background: var(--blueG);
 }
 
+/* Custom Snackbar */
+.custom-snackbar{
+  background-color: var(--purpleG);
+  color: white;
+  font-family: 'Arial Rounded MT' !important;
+}

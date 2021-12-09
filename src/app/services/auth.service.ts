@@ -17,7 +17,6 @@ export class AuthService {
   private baseURL = "https://identitytoolkit.googleapis.com/v1/accounts:";
   private loggedIn = new BehaviorSubject<boolean>(false);
   constructor(private http: HttpClient) {
-    console.log("Constructor AuthService");
     this.checkToken();
   }
   olvidoContrasena(email: string){
@@ -120,25 +119,25 @@ export class AuthService {
 
     const Token = localStorage.getItem('token_login');
     const existTokenLogin = Token ? true : false;
-    console.log(existTokenLogin);
-    // existTokenLogin ? this.loggedIn.next(true) : this.logout();
+/*     console.log(existTokenLogin);
+ */    // existTokenLogin ? this.loggedIn.next(true) : this.logout();
     if(existTokenLogin){
       this.loggedIn.next(true)
-      console.log("Si hay token");
-      let token = localStorage.getItem('token_login');
+/*       console.log("Si hay token");
+ */      let token = localStorage.getItem('token_login');
       this.validateToken(token!.toString()).subscribe( _res => {
         console.log("Si entra al sub");
         if(_res.status == true){
           this.loggedIn.next(_res.status)
-          console.log("Si es valido el token");
-        }else{
-          console.log("No es valido el token");
-          this.logout();
+/*           console.log("Si es valido el token");
+ */        }else{
+/*           console.log("No es valido el token");
+ */          this.logout();
         }
       });
     }else{
-      console.log("No hay token");
-      this.logout();
+/*       console.log("No hay token");
+ */      this.logout();
     }
   }
 
