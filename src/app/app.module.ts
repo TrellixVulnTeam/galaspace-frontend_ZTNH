@@ -35,6 +35,7 @@ import { MessagesPageComponent } from './components/messages-page/messages-page.
 import { ContactsPageComponent } from './components/contacts-page/contacts-page.component';
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
 import { ChatPageComponent } from './components/chat-page/chat-page.component';
+import { MessageComponent } from './components/message/message.component';
 
 
 
@@ -62,6 +63,7 @@ import { ChatPageComponent } from './components/chat-page/chat-page.component';
     ContactsPageComponent,
     FavouritesPageComponent,
     ChatPageComponent,
+    MessageComponent,
  
 
   ],
