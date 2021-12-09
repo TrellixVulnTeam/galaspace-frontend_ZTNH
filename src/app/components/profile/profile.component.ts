@@ -11,6 +11,8 @@ export class ProfileComponent implements OnInit {
   @Input()
   isMine!: boolean;
 
+  showFriends = false;
+
   constructor(private postService: PostService) { }
 
   showFirstTab = true;

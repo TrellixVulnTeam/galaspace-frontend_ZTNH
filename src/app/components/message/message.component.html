@@ -1,0 +1,17 @@
+<div class="p-2" id="container-contacts" *ngFor="let _ of [0,1,2,3,4,5,6,7,8,9]; let i = index">
+    
+    <div  class="d-flex align-items-center" id="item-contact" (click)="goToChat(i)"> 
+        <img 
+        src="https://sunrift.com/wp-content/uploads/2014/12/Blake-profile-photo-square.jpg"
+        alt="profile-picture-contact"
+        id="profile-picture-contact"
+        >
+        <div>
+            <p id="contact-name">Name of contact</p>
+            <p id="contact-namee">Hola como estas?</p>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end">
+        <p id="time">12:00 PM</p>
+    </div>
+</div>
