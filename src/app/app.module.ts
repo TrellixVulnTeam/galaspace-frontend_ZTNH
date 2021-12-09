@@ -36,7 +36,10 @@ import { ContactsPageComponent } from './components/contacts-page/contacts-page.
 import { FavouritesPageComponent } from './components/favourites-page/favourites-page.component';
 import { ChatPageComponent } from './components/chat-page/chat-page.component';
 import { MessageComponent } from './components/message/message.component';
-
+import {
+  BrowserAnimationsModule
+} from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -68,6 +71,7 @@ import { MessageComponent } from './components/message/message.component';
 
   ],
   imports: [
+    BrowserAnimationsModule,
     HttpClientModule,
     MatSliderModule,
     FormsModule,
@@ -81,6 +85,7 @@ import { MessageComponent } from './components/message/message.component';
     MatIconModule,
     MatProgressSpinnerModule,
     InfiniteScrollModule,
+    MatSnackBarModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }

@@ -3,6 +3,7 @@ import { PostService } from '../../services/post.service';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-create-post',
@@ -35,7 +36,7 @@ export class CreatePostComponent implements OnInit {
   };
 
 
-  constructor(private fb: FormBuilder, private postService: PostService) {}
+  constructor(private fb: FormBuilder, private postService: PostService, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
 
@@ -62,14 +63,14 @@ export class CreatePostComponent implements OnInit {
     this.deletePhoto();
   }
 
-  showAlert(): void {
+  /* showAlert(): void {
     Swal.fire({
       title: 'Publicación hecha!',
       text: 'Sigue navegado...',
       icon: 'success',
       confirmButtonText: 'Acpetar'
     });
-  }
+  } */
 
   setNewPost(): void {
     this.newPost = {
@@ -89,7 +90,7 @@ export class CreatePostComponent implements OnInit {
       () => {
         this.setNewPost(),
         this.cleanUI();
-        this.showAlert();
+        this.openSnackBar();
         this.showPostButton = true;
       },
       (error: any) => {
@@ -161,5 +162,9 @@ export class CreatePostComponent implements OnInit {
     if (e.target.value.length == 1) {
       e.target.style.height = '50px';
     }
+  }
+  openSnackBar() {
+    this._snackBar.open("Publicación realizada", "Aceptar", {panelClass: ['custom-snackbar']
+  });
   }
 }

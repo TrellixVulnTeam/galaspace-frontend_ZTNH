@@ -6,22 +6,25 @@ import { PostService } from 'src/app/services/post.service';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
-
   @Input()
   isMine!: boolean;
 
   showFriends = false;
+  showButtonRequest = false;
 
-  constructor(private postService: PostService, private authService: AuthService, private router: Router) { }
+  constructor(
+    private postService: PostService,
+    private authService: AuthService,
+    private router: Router
+  ) {}
 
   showFirstTab = true;
   showSecondTab = false;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   onScrollDown() {
     this.addItems();
   }
@@ -30,12 +33,12 @@ export class ProfileComponent implements OnInit {
     this.postService.addMorePost();
   }
 
-  setTabPosition(index: number){
-    if(index == 0){
+  setTabPosition(index: number) {
+    if (index == 0) {
       this.showSecondTab = false;
       this.showFirstTab = true;
     }
-    if(index == 1){
+    if (index == 1) {
       this.showFirstTab = false;
       this.showSecondTab = true;
     }
@@ -45,6 +48,4 @@ export class ProfileComponent implements OnInit {
     this.authService.logout();
     this.router.navigate(['/login']);
   }
-
-
 }
