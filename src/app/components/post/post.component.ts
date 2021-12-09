@@ -1,6 +1,6 @@
 import { FormControl, Validators } from '@angular/forms';
 import { Post } from './../../interfaces/post';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 
 
@@ -17,6 +17,8 @@ export interface Comment {
 })
 
 export class PostComponent implements OnInit {
+  @ViewChild('scrollModal') private myScrollContainer: ElementRef | undefined;
+
   @Input()
   isMine!: boolean;
   @Input()
@@ -88,8 +90,14 @@ export class PostComponent implements OnInit {
       name: "My name",
       body: this.body.value,
     }
-    this.comments.push(commentTmp);
+    this.comments.unshift(commentTmp);
     this.body.patchValue('');
+  }
+  scrollBottom():void{
+    try{
+      this.myScrollContainer!.nativeElement.scrollTop=this.myScrollContainer!.nativeElement.scrollHeight;
+    }
+    catch(err){}
   }
 }
 
