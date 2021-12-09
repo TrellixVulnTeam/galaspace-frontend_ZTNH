@@ -30,7 +30,8 @@ export class LoginFormComponent {
   setData(): void {
     this.dataLogin = {
       email: this.loginForm.get('email')!.value,
-      password: this.loginForm.get('password')!.value
+      password: this.loginForm.get('password')!.value,
+      returnSecureToken: true,
     }
   }
   olvidoContrasena(){
