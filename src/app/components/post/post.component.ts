@@ -5,36 +5,37 @@ import { PostService } from 'src/app/services/post.service';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
-
   @Input()
   isMine!: boolean;
   @Input()
   isLoved?: boolean;
-  
 
   posts: Post[] = [];
   lovedPost: number[] = [];
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService) {}
 
   ngOnInit(): void {
     this.loadPosts();
   }
 
   loadPosts(): void {
-    this.posts = this.postService.getPosts();    
+    this.posts = this.postService.getPosts();
   }
 
   reloadPost(): void {
     this.postService.addMorePost();
   }
 
-  loved(i: number){
-    this.lovedPost.push(i);    
+  loved(i: number) {
+    this.lovedPost.push(i);
   }
- 
 
+  deletePost(i: any) {
+    let index = this.posts.indexOf(i);
+    this.posts.splice(index, 1);
+  }
 }

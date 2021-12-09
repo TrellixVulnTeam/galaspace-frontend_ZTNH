@@ -12,6 +12,9 @@ import { catchError, map, timeout } from 'rxjs/operators';
 })
 export class AuthService {
   private apiURL = environment.apiURL;
+  private apiKEY = "AIzaSyALiiwCiE8RBu3VeZ2-nOTFWdVKQD9nTCA";
+  
+  private baseURL = "https://identitytoolkit.googleapis.com/v1/accounts:";
   private loggedIn = new BehaviorSubject<boolean>(false);
   constructor(private http: HttpClient) {
     console.log("Constructor AuthService");
@@ -33,8 +36,8 @@ export class AuthService {
       })
     );
   }
-  signUp(formSignUp: FormData) {
-    return this.http.post<UserCreated>(`${this.apiURL}register`, formSignUp);
+  signUp(formSignUp: Login) {
+    return this.http.post(`${this.baseURL}signUp`, formSignUp, {params: {"key":this.apiKEY}});
   }
 
   reenviarCorreo(email: string){
@@ -42,10 +45,12 @@ export class AuthService {
   }
 
   login(formLogin: Login): Observable<any> {
-    return this.http.post(`${this.apiURL}login`, formLogin).pipe(
+    
+
+    return this.http.post(`${this.baseURL}signInWithPassword`, formLogin, {params: {"key":this.apiKEY}}).pipe(
       map((_response: any) => {
         //console.log(_response);
-        this.saveToken(_response.token.token);
+        this.saveToken(_response.idToken);
         this.loggedIn.next(true);
         // this.user = _response.user;
         // this.saveUserData(this.user);

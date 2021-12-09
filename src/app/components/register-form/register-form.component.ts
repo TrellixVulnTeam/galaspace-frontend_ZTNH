@@ -1,3 +1,4 @@
+import { Login } from 'src/app/interfaces/login';
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators, FormGroup, FormBuilder} from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,6 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class RegisterFormComponent implements OnInit {
   registerForm!: FormGroup;
+  data!: Login;
   constructor(private fb: FormBuilder, private router:Router, private authService: AuthService) {}
 
   ngOnInit() {
@@ -26,24 +28,34 @@ export class RegisterFormComponent implements OnInit {
     return this.registerForm.controls;
   }
 
+  setValues(): void {
+    this.data = {
+      name: this.registerForm.get('name')!.value,
+      email: this.registerForm.get('email')!.value,
+      password: this.registerForm.get('password')!.value,
+      password_confirmation: this.registerForm.get('password_confirmation')!.value,
+      returnSecureToken: true,
+    }
+  }
+
+
   onSubmit(form: FormGroup) {
+    this.setValues();
     if (form.invalid) {
       return Object.values(this.registerForm.controls).forEach(control => {
         control.markAsTouched()
       });
     } else {
-      this.authService.signUp(this.registerForm.value).subscribe(
+      this.authService.signUp(this.data).subscribe(
         (res) => {
-          if (res.status === true) {
             Swal.fire({
               icon: 'success',
               title: 'Listo!',
-              text: 'Se te ha enviado un correo para confirmar tu cuenta.',
-              footer: '<p>¿No has recibido el correo? <a href="" style="color: #3E2669;font-family: Arial Rounded MT Bold;">Reenviar</a><p>'
+              text: 'Ahora ya tienes cuenta :D.',
             }).then(() => {
               this.router.navigate(['/login'])
             })
-          }
+      
 
         } ,
         (err) => {

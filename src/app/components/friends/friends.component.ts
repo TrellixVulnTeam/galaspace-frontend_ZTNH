@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ChatService } from 'src/app/services/chat.service';
 import { Monami } from 'src/app/interfaces/Monami';
 import { Router } from '@angular/router';
@@ -9,6 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./friends.component.css']
 })
 export class FriendsComponent implements OnInit {
+
+  @Input()
+  isMine = true;
+
 
   constructor(private chatServ: ChatService, private router: Router) { }
 

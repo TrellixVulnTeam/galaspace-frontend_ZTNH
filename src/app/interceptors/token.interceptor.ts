@@ -5,7 +5,8 @@ import {
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
-  HttpErrorResponse
+  HttpErrorResponse,
+  HttpParams
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -19,11 +20,15 @@ export class TokenInterceptor implements HttpInterceptor {
 
     const token: string = localStorage.getItem('token_login')!;
     console.log(token);
+   
     let _request = request;
     if (token) {
       _request = request.clone({
         setHeaders: {
           authorization: `Bearer ${token}`
+        },
+        setParams: {
+          auth: token,
         }
       });
     }

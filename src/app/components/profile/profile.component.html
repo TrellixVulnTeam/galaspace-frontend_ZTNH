@@ -28,7 +28,7 @@
         Editar&nbsp;
         <span class="material-icons">edit</span>
       </button>
-      <button class="profile-button d-flex align-items-center" *ngIf="isMine">
+      <button class="profile-button d-flex align-items-center" *ngIf="isMine" (click)="logout()">
         <span class="material-icons">logout</span>
       </button>
     </div>
@@ -45,5 +45,5 @@
   <p id="title" *ngIf="!showFriends">{{isMine? "Mis publicaciones": "Publicaciones"}}</p>
   <p id="title" *ngIf="showFriends">Lista de Amigos</p>
   <app-post [isMine]="isMine" *ngIf="!showFriends"></app-post>
-  <app-friends *ngIf="showFriends"></app-friends>
+  <app-friends *ngIf="showFriends" [isMine]="isMine"></app-friends>
 </div>

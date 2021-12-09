@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { PostService } from 'src/app/services/post.service';
 
@@ -13,7 +15,7 @@ export class ProfileComponent implements OnInit {
 
   showFriends = false;
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private authService: AuthService, private router: Router) { }
 
   showFirstTab = true;
   showSecondTab = false;
@@ -38,5 +40,11 @@ export class ProfileComponent implements OnInit {
       this.showSecondTab = true;
     }
   }
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
 
 }
